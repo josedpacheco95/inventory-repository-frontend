@@ -9,16 +9,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@programic/vue3-tooltip": "^1.0.0",
+    "ag-grid-vue3": "^34.0.2",
     "axios": "^1.10.0",
     "bootstrap": "^4.6.2",
     "vue": "^3.5.17",
     "vue-axios": "^3.5.2",
+    "vue-final-modal": "^4.5.5",
     "vue-router": "^4.5.1",
+    "vue3-easy-data-table": "^1.5.47",
+    "vuejs-smart-table": "^0.0.8",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
+    "sass-embedded": "^1.89.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
     "vue-tsc": "^2.2.12"

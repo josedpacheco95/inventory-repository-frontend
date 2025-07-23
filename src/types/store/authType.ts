@@ -19,3 +19,17 @@ export interface AuthenticationState  {
     session: SessionType | null
     token: string | null
 }
+
+export interface RegisterBody {
+    first_name: string
+    last_name: string
+    email: string
+    password: string
+    store_name: string
+    store_location: string
+}
+
+export interface LoginBody {
+    email: string
+    password: string
+}

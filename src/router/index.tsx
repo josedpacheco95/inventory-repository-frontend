@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const Login = () => import("@/views/Login.vue");
-const Register = () => import("@/views/Register.vue");
-const ItemDashBoard = () => import("@/views/ItemDashBoard.vue");
-const ItemDetail = () => import("@/views/ItemDetail.vue");
-const Store = () => import("@/views/Store.vue");
-
+const Login = () => import("../views/Authentication/Login.vue");
+const Register = () => import("../views/Authentication/Register.vue");
+const ItemDashBoard = () => import("../views/Item/ItemDashboard.vue");
+const ItemDetail = () => import("../views/Item/ItemDetail.vue");
+const Store = () => import("../views/Store/Store.vue");
+const Configuration = () => import("../views/Configuration/Configuration.vue");
 export const router = createRouter({
   history: createWebHistory(),
   linkActiveClass: "open active",
@@ -39,6 +39,11 @@ export const router = createRouter({
       name: "Store",
       component: Store,
     },
+    {
+      path: "/configuration",
+      name: "Configuration",
+      component: Configuration,
+    }
   ],
 });
 export default router;

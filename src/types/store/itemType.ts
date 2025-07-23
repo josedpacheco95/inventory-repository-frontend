@@ -1,4 +1,4 @@
-
+import type { PaginationType } from "./common"
 
 export type ItemType = {
     unique_id: string
@@ -19,11 +19,15 @@ export type ItemBody = {
     name: string
     quantity: number
     location: string
-    description: string
-    store_id: string
+    description?: string
 }
 
 export interface StateItem {
     items: ItemType[]
     item: ItemType | null
+}
+
+export interface ItemGetParams {
+    search?: string
+    pagination: PaginationType
 }

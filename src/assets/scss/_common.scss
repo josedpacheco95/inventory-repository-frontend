@@ -1,0 +1,25 @@
+.login-card {
+    max-width: 499.33px;
+    min-height: 412.02px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    background-color: #0f1014 !important;
+  }
+  .login-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 1200px) {
+      min-width: 1140px;
+    }
+    @media (min-width: 992px) {
+      min-width: 960px;
+    }
+    @media (min-width: 768px) {
+      min-width: 720px;
+    }
+    @media (min-width: 576px) {
+      min-width: 540px;
+    }
+  }
