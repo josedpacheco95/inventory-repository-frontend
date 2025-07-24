@@ -7,10 +7,12 @@ import router from "./router";
 import { store } from "./store";
 import { setup } from "./helpers/interceptor";
 import customComponents from "./helpers/customComponents";
-import Vue3EasyDataTable from 'vue3-easy-data-table';
-import 'vue3-easy-data-table/dist/style.css';
+import {createBootstrap} from 'bootstrap-vue-next'
+
 // Import Bootstrap and BootstrapVue CSS files (order is important)
-import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
+
 
 import "./style.css";
 import App from "./App.vue";
@@ -21,8 +23,7 @@ const app = createApp(App);
 app.use(VueAxios, axios);
 app.use(router);
 app.use(store);
-app.component('EasyDataTable', Vue3EasyDataTable);
-
+app.use(createBootstrap());
 
 customComponents(app);
 app.mount("#app");

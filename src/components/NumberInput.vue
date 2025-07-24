@@ -23,15 +23,15 @@ const props = defineProps({
   },
   validationCondition: {
     type: Boolean,
-    required: true,
+    required: false,
   },
   validationMessage: {
     type: String,
-    required: true,
+    required: false,
   },
   label: {
     type: String,
-    required: true,
+    required: false,
   },
   id: {
     type: String,

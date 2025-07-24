@@ -9,10 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/free-regular-svg-icons": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.0",
     "@programic/vue3-tooltip": "^1.0.0",
     "ag-grid-vue3": "^34.0.2",
     "axios": "^1.10.0",
     "bootstrap": "^4.6.2",
+    "bootstrap-vue-next": "^0.30.4",
     "vue": "^3.5.17",
     "vue-axios": "^3.5.2",
     "vue-final-modal": "^4.5.5",
@@ -26,6 +32,7 @@
     "@vue/tsconfig": "^0.7.0",
     "sass-embedded": "^1.89.2",
     "typescript": "~5.8.3",
+    "unplugin-vue-components": "^28.8.0",
     "vite": "^7.0.4",
     "vue-tsc": "^2.2.12"
   }

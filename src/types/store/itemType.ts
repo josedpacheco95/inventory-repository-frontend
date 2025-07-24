@@ -16,6 +16,7 @@ export type ItemResponse = {
 }
 
 export type ItemBody = {
+    unique_id: string
     name: string
     quantity: number
     location: string
@@ -25,9 +26,11 @@ export type ItemBody = {
 export interface StateItem {
     items: ItemType[]
     item: ItemType | null
+    total_items: number
 }
 
 export interface ItemGetParams {
     search?: string
+    quantity?: number
     pagination: PaginationType
 }

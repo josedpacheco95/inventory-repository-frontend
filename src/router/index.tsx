@@ -30,10 +30,11 @@ export const router = createRouter({
       path: "/",
       name: "Items",
       component: ItemDashBoard,
-      children: [
-        { path: "item/:id", component: ItemDetail, name: "Item Detail" },
-      ],
     },
+    { 
+      path: "/item_detail/:id", 
+      component: ItemDetail, 
+      name: "Item Detail" },
     {
       path: "/store",
       name: "Store",
@@ -43,7 +44,7 @@ export const router = createRouter({
       path: "/configuration",
       name: "Configuration",
       component: Configuration,
-    }
+    },
   ],
 });
 export default router;

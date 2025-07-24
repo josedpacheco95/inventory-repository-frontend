@@ -1,6 +1,7 @@
 <template>
   <label v-if="label" :for="id" class="form-label">{{ label }}</label>
   <input
+    :bind="$attrs"
     :id="id"
     :type="type"
     class="form-control input-styles"
@@ -14,24 +15,24 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps, defineEmits } from "vue";
+import { ref, defineProps, defineEmits, onMounted, watch } from "vue";
 
-defineProps({
+const props = defineProps({
   modelValue: {
     type: String,
     required: true,
   },
   validationCondition: {
     type: Boolean,
-    required: true,
+    required: false,
   },
   validationMessage: {
     type: String,
-    required: true,
+    required: false,
   },
   label: {
     type: String,
-    required: true,
+    required: false,
   },
   type: {
     type: String,
@@ -45,13 +46,19 @@ defineProps({
 
 defineEmits(["update:modelValue"]);
 
-const inputValue = ref("");
+const inputValue = ref(props.modelValue);
+onMounted(() => {
+  inputValue.value = props.modelValue;
+});
+watch(() => props.modelValue, (newValue) => {
+  inputValue.value = newValue;
+}, { immediate: true });
 </script>
 
 <style lang="scss" scoped>
-    .input-styles {
-        border: 1px solid #069591 !important;
-        border-radius: 2px !important;
-        color: #ababab;
-    }
+.input-styles {
+  border: 1px solid #069591 !important;
+  border-radius: 2px !important;
+  color: #ababab;
+}
 </style>
